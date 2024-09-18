@@ -115,3 +115,37 @@ Remove o arquivo descrito em código.
 git restore --staged nome-do-arquivo
 ```
 Também remove os arquivos da área de preparação.
+
+## Trabalhando com Branches
+De maneira simplista, uma Branch (ramo) é uma ramificação do seu projeto.
+- É um ponteiro móvel para um commit no histórico do repositório;
+- Quando você cria uma nova Branch a partir de outra existente, a nova se inicia apontando para o mesmo commit da Branch que estava quando foi criada.
+
+```
+git checkout -b nome-da-branch
+```
+Cria uma nova branch e a substitui a branch "main" pela criada.
+
+```
+git checkout nome-da-branch
+```
+Muda para a branch selecionada.
+
+```
+git ranch -v
+```
+Mostra o último commit de cada branch.
+
+
+```
+git merge nome-da-branch
+```
+Mescla a branch selecionada com a branch main
+
+```
+git branch -d nome-da-branch
+```
+Deleta a branch selecionada.
+
+### Conflito de Merge
+Acontece quando há alterações concorrentes.
