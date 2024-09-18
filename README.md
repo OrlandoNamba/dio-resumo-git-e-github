@@ -60,56 +60,56 @@ Empurra as alterações do repositório local para o remoto. <br> <br>
 ```
 git remote add origin URL
 ```
-Conecta o repositório local com o remoto.
+Conecta o repositório local com o remoto.<br><br>
 ```
 git clone URL nome-do-diretorio-local
 ```
-Clona o repositório do qual foi copiado. A parte de "nome-do-diretorio-local" é para caso eu queira mudar o nome do clone.
+Clona o repositório do qual foi copiado. A parte de "nome-do-diretorio-local" é para caso eu queira mudar o nome do clone.<br><br>
 
 ```
 git clone URL --branch nome-da-branch-desejada --signle-branch
 ```
-Comando para clonar apenas uma branch.
+Comando para clonar apenas uma branch.<br><br>
 
 ```
 gi restore arquivo-a-ser-restaurado
 ```
-Restaura ao último estado em que o arquivo havia sido salvo. Quando utilizar o comando, verifique se você não quer perder alguma alteração da qual foi feitae não salva. Pois, esse comando irá descartá-las.
+Restaura ao último estado em que o arquivo havia sido salvo. Quando utilizar o comando, verifique se você não quer perder alguma alteração da qual foi feitae não salva. Pois, esse comando irá descartá-las.<br><br>
 
 ```
 git commit --amend -m"novo-nome-do-ultimo-commit"
 ```
-Renomeia o seu último commit para o nome de sua escolha.
+Renomeia o seu último commit para o nome de sua escolha.<br><br>
 
 ```
 git log
 ```
-Mostra seu histórico de commits.
+Mostra seu histórico de commits.<br><br>
 
 ```
 git reset --soft hash-do-commit
 ```
-Ele pega os arquivos que estavam no commit selecionado e os adicionam na área de preparação.
+Ele pega os arquivos que estavam no commit selecionado e os adicionam na área de preparação.<br><br>
 
 ```
 git reset --mixed hash-do-commit
 ```
-Pega os arquivos no commit selecionado e os adicionam na área de trabalho.
+Pega os arquivos no commit selecionado e os adicionam na área de trabalho.<br><br>
 
 ```
 git reset --hard hash-do-commit
 ```
-Ele ignora os arquivos que estavam no commit selecionado e os desfaz.
+Ele ignora os arquivos que estavam no commit selecionado e os desfaz.<br><br>
 
 ```
 git reflog
 ```
-Comando para visualizar o histórico de commits de forma mais detalhada.
+Comando para visualizar o histórico de commits de forma mais detalhada.<br><br>
 
 ```
 git reset nome-do-arquivo
 ```
-Remove o arquivo descrito em código.
+Remove o arquivo descrito em código.<br><br>
 
 ```
 git restore --staged nome-do-arquivo
@@ -124,23 +124,23 @@ De maneira simplista, uma Branch (ramo) é uma ramificação do seu projeto.
 ```
 git checkout -b nome-da-branch
 ```
-Cria uma nova branch e a substitui a branch "main" pela criada.
+Cria uma nova branch e a substitui a branch "main" pela criada.<br><br>
 
 ```
 git checkout nome-da-branch
 ```
-Muda para a branch selecionada.
+Muda para a branch selecionada.<br><br>
 
 ```
 git ranch -v
 ```
-Mostra o último commit de cada branch.
+Mostra o último commit de cada branch.<br><br>
 
 
 ```
 git merge nome-da-branch
 ```
-Mescla a branch selecionada com a branch main
+Mescla a branch selecionada com a branch main<br><br>
 
 ```
 git branch -d nome-da-branch
@@ -154,8 +154,29 @@ Você e um colega estão trabalhando no mesmo repositório e vocês acabam alter
 
 Isso fará com que ao realizar a tentativa de enviar uma atualização para o GitHub, acabe gerando um conflito com o que seu colega havia enviado. Isso acontece, pois, o Git não entende qual alteração deve ser mantida, então, ele retorna o erro para decidir-mos qual alteração optaremos por manter.
 
-Para corrigir, basta executar o comando abaixo. Pois ele retorna o conteúdo que está no repositório online para nossa máquina.
+Para corrigir, basta executar o comando abaixo. Pois ele retorna o conteúdo que está no repositório remoto para nossa máquina.
 ```
 git pull
 ```
-Após isso, eu seleciono qual alteração eu desejo manter e depois faço o envio para o repositório online.
+Após isso, eu seleciono qual alteração eu desejo manter e depois faço o envio para o repositório remoto. <br><br>
+
+```
+git fetch origin main
+```
+Baixa as alterações do repositório remoto origin da branch main, e não mescla com o repositório local. <br><br>
+
+```
+git diff main origin/main
+```
+Esse comando retorna as diferença entre as branchs selecionadas. <br><br>
+
+```
+git merge origin/main
+```
+Traz as alterações do repositório remoto para o local.<br><br>
+
+```
+git clone url-do-repositorio --branch nome-da-branch -- single-branch
+```
+Esse comando clona apenas a branch escolhida. <br><br>
+
