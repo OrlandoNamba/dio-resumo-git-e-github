@@ -71,3 +71,47 @@ git clone URL --branch nome-da-branch-desejada --signle-branch
 ```
 Comando para clonar apenas uma branch.
 
+```
+gi restore arquivo-a-ser-restaurado
+```
+Restaura ao último estado em que o arquivo havia sido salvo. Quando utilizar o comando, verifique se você não quer perder alguma alteração da qual foi feitae não salva. Pois, esse comando irá descartá-las.
+
+```
+git commit --amend -m"novo-nome-do-ultimo-commit"
+```
+Renomeia o seu último commit para o nome de sua escolha.
+
+```
+git log
+```
+Mostra seu histórico de commits.
+
+```
+git reset --soft hash-do-commit
+```
+Ele pega os arquivos que estavam no commit selecionado e os adicionam na área de preparação.
+
+```
+git reset --mixed hash-do-commit
+```
+Pega os arquivos no commit selecionado e os adicionam na área de trabalho.
+
+```
+git reset --hard hash-do-commit
+```
+Ele ignora os arquivos que estavam no commit selecionado e os desfaz.
+
+```
+git reflog
+```
+Comando para visualizar o histórico de commits de forma mais detalhada.
+
+```
+git reset nome-do-arquivo
+```
+Remove o arquivo descrito em código.
+
+```
+git restore --staged nome-do-arquivo
+```
+Também remove os arquivos da área de preparação.
