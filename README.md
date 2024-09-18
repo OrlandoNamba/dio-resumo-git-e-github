@@ -25,7 +25,7 @@ Nesse sistema temos apenas um servidor contendo todos os arquivos responsáveis 
 Nesse sitema, cada banco de versão é duplicado localmente, permitindo a edição mesmo com o servidor fora do ar. Ele clona o repositório completo, o que inclui o histório de versões.
 - Cada clone é como um backup;
 - Possibilita um fluxo de trabalho flexível;
-- Possibilidade de trabalhar sem conexão à rede.
+- Possibilidade de trabalhar sem conexão à rede. <br> <br>
 
 ### O que é GIT?
 É um sistema de Controle de Versão Distribuído.
@@ -49,12 +49,12 @@ Puxa as alterações do repositório remoto para o local (busca e mescla).
 ```
 git push 
 ```
-Empurra as alterações do repositório local para o remoto.
+Empurra as alterações do repositório local para o remoto. <br> <br>
 
 ## O que é GitHub?
 É uma plataforma de hospedagem de código para controle de versão com Git, e colaboração.
 - Comunidade ativa;
-- Utilizado mundialmente;
+- Utilizado mundialmente; <br> <br>
 
 ## Mais alguns comandos Git:
 ```
@@ -114,7 +114,7 @@ Remove o arquivo descrito em código.
 ```
 git restore --staged nome-do-arquivo
 ```
-Também remove os arquivos da área de preparação.
+Também remove os arquivos da área de preparação. <br> <br>
 
 ## Trabalhando com Branches
 De maneira simplista, uma Branch (ramo) é uma ramificação do seu projeto.
@@ -145,7 +145,17 @@ Mescla a branch selecionada com a branch main
 ```
 git branch -d nome-da-branch
 ```
-Deleta a branch selecionada.
+Deleta a branch selecionada. <br> <br>
 
-### Conflito de Merge
-Acontece quando há alterações concorrentes.
+## Conflito de Merge
+Acontece quando há alterações concorrentes. Utilizando um cenário hipotético como exemplo: <br>
+
+Você e um colega estão trabalhando no mesmo repositório e vocês acabam alterando a mesma linha de código. <br>
+
+Isso fará com que ao realizar a tentativa de enviar uma atualização para o GitHub, acabe gerando um conflito com o que seu colega havia enviado. Isso acontece, pois, o Git não entende qual alteração deve ser mantida, então, ele retorna o erro para decidir-mos qual alteração optaremos por manter.
+
+Para corrigir, basta executar o comando abaixo. Pois ele retorna o conteúdo que está no repositório online para nossa máquina.
+```
+git pull
+```
+Após isso, eu seleciono qual alteração eu desejo manter e depois faço o envio para o repositório online.
